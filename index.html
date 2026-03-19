@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="shell">
+
+    <!-- Top chrome -->
+    <div class="chrome">
+      <span class="chrome-label">CALC</span>
+      <div class="chrome-actions">
+        <button class="chrome-btn" id="histBtn" title="History [H]">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.3"/>
+            <polyline points="7,4 7,7 9.2,9.2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button class="chrome-btn" id="themeBtn" title="Theme [T]">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.3"/>
+            <path d="M7 1.5 A5.5 5.5 0 0 1 7 12.5 Z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Collapsible history drawer -->
+    <div class="hist-drawer" id="histDrawer">
+      <div class="hist-inner" id="histInner">
+        <p class="hist-empty" id="histEmpty">No calculations yet</p>
+      </div>
+    </div>
+
+    <!-- Display area -->
+    <div class="display">
+      <div class="expr-line" id="exprLine">&nbsp;</div>
+      <div class="main-line" id="mainLine">0</div>
+    </div>
+
+    <!-- Button grid (populated by JS) -->
+    <div class="grid" id="grid" role="group" aria-label="Calculator buttons"></div>
+
+  </div>
+
+  <p class="hint">⌨ keyboard &amp; backspace supported · [T] theme · [H] history</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
